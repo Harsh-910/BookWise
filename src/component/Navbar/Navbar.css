@@ -1,0 +1,131 @@
+/* Navbar Styles */
+.navbar {
+    flex-direction: column;
+    background: var(--navbar-color);
+}
+
+.navbar-left h2 {
+    letter-spacing: 1px;
+    margin-left: 0.5rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+.navbar-main {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 1rem
+}
+
+.navbar-right > li {
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--container-color-dark);
+    padding: 0.5rem 0.9rem;
+    gap: 1rem;
+    width: 35%;
+    overflow: auto;
+    border-radius: var(--border-md);
+    color: var(--font-color);
+}
+
+.search-bar {
+    outline: none;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--font-color);
+    background-color: var(--container-color-dark);
+}
+
+.search-bar::placeholder {
+    background-color: var(--container-color-dark);
+    font-weight: var(--font-light);
+    color: var(--font-color);
+}
+
+.nav-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.drawer-hamberg-btn {
+    display: none;
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+}
+
+.drawer-hamberg-btn:hover{
+    background: none;
+    color:var(--primary-color);
+}
+
+.logo-wrapper{
+    cursor: pointer;
+}
+
+.nav-header-icon{
+    color: var(--icon-color);
+}
+
+@media screen and (max-width: 950px) {
+
+    .drawer-hamberg-btn {
+        display: block;
+        color: var(--icon-color);
+    }
+    .logo-wrapper{
+        cursor: default;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    .login {
+        font-size: 1.4Rem;
+        cursor: default
+    }
+    .navbar-left {
+        justify-content: space-between;
+    }
+    .navbar {
+        justify-content: space-between;
+        padding: 0.8rem 0.1rem;
+        gap: 1rem
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    .search-mob {
+        display: flex;
+        width: 92%;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .navbar-right > li {
+        cursor: default;
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (min-width:500px) {
+    .search-mob {
+        display: none
+    }
+}
